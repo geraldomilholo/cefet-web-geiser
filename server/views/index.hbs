@@ -95,9 +95,32 @@
               </a>
             </div>
           </li>
+          
+          {{#each players}}
+            <li class="media player-card">
+              <a class="media-left media-middle" href="#">
+                <img src="{{avatar}}" class="avatar">
+              </a>
+              <div class="media-body">
+                <h3 class="media-heading"><a href="/user/{{steamid}}/">{{personaname}}</a></h3>
+                <dl class="dl-horizontal">
+                  <dt>Nome real:</dt><dd>{{realname}}</dd>
+                  <dt>País:</dt><dd>{{loccountrycode}}</dd>
+                  <dt>Perfil no steam:</dt><dd><a href="{{profileurl}}">@{{personaname}}</a></dd>
+                </dl>
+              </div>
+              <div class="player-card-link-container media-right media-bottom">
+                <a href="/jogador/{{steamid}}/" class="player-card-link">
+                  + detalhes
+                </a>
+              </div>
+            </li>
+          {{/each}}
+
         </ul>
       </div>
     </div>
+
   </div>
 </body>
 </html>
